@@ -1,0 +1,15 @@
+GET http://localhost:3000/gateways
+
+###
+GET http://localhost:3000/gateways/64a71e546116d22fd332414a
+
+
+###
+POST http://localhost:3000/gateways HTTP/1.1
+# Content-Type: "application/json"
+
+{
+    "name": "skynet",
+    "ipv4Address": "192.0.9.21",
+    "devices": []
+}
