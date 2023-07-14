@@ -17,12 +17,12 @@ This is a nodejs REST service for storing information about these gateways and t
 - Run npm install to install its dependencies
 - serve the node server by running nodemon index
 
-- Use postman or any other REST client app to run request using the following end points:
-  The service has the following APIs:
-  //create a new gateway
-  POST http://localhost:3000/gateways
+Use POSTMAN or any other REST client app to run request using the following end points:
 
-//add a new device to a gateway
+Create a new gateway
+POST http://localhost:3000/gateways
+
+Add a new device to a gateway
 POST http://localhost:3000/gateways/{gatewayId}/devices
 
 //get all gateways
