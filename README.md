@@ -1,48 +1,48 @@
-## PROJECT SETUP
+# Project Setup
 
 ## Introduction
 
-This is a nodejs REST service for storing information about these gateways and their associated devices.
+This repository contains a Node.js REST service for storing information about gateways and their associated devices.
 
-## Setup and Installation:
+## Setup and Installation
 
-- Install mongodb by downloading from its official website for a mac or windows machine
-- Make sure it is saved in your system path
-- Start mongodb by running mongod or mongodb in the terminal or microsoft shell
-- open mongodb using compass
-- create a new database and name it musala
-- and import the collection in dbcollection.json in the root directory
-- Download the project into your local web server
-- Open the folder using Visual Studio Code
-- Run npm install to install its dependencies
-- serve the node server by running nodemon index
+To set up the project, follow these steps:
 
-Use POSTMAN or any other REST client app to run request using the following end points:
+1. Download and install MongoDB from the official website for your Mac or Windows machine.
+2. Ensure that MongoDB is saved in your system path.
+3. Start MongoDB by running `mongod` or `mongodb` in the terminal or Microsoft Shell.
+4. Open MongoDB using Compass.
+5. Create a new database and name it `musala`.
+6. Import the collection from `dbcollection.json` located in the root directory.
+7. Download the project into your local web server.
+8. Open the project folder using Visual Studio Code.
+9. Run the following `npm install` to install the project's dependencies:
+10. Serve the Node server by running `nodemon index`
 
-Create a new gateway
+## Usage
 
-POST http://localhost:3000/gateways
+Use POSTMAN or any other REST client app to interact with the API using the following endpoints:
 
-Add a new device to a gateway
-POST http://localhost:3000/gateways/{gatewayId}/devices
+- Create a new gateway:
+  POST http://localhost:3000/gateways
 
-Get all gateways
-GET http://localhost:3000/gateways
+- Add a new device to a gateway:
+  POST http://localhost:3000/gateways/{gatewayId}/devices
 
-Get a specific gateway with ID
-GET http://localhost:3000/gateways/{gatewayId}
+- Get all gateways:
+  GET http://localhost:3000/gateways
 
-Get all devices in a gateway
-GET http://localhost:3000/gateways/{gatewayId}/devices/
+- Get all devices in a gateway:
+  GET http://localhost:3000/gateways/{gatewayId}
 
-Get a specific device in a gateway
-GET http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
+- Get a specific device in a gateway:
+  GET http://localhost:3000/gateways/{gatewayId}/devices/
 
-Patch a gateway with ID
-PATCH http://localhost:3000/gateways/{gatewayId}
+- Update a gateway with ID:
+  PATCH http://localhost:3000/gateways/{gatewayId}
 
-Patch a device in a gateway
-PATCH http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
+- Update a device in a gateway:
+  PATCH http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
 
-Remove a device from a gateway
-DELETE http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
+- Remove a device from a gateway:
+  DELETE http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
