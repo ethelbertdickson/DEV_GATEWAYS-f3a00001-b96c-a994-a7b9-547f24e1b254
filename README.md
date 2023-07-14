@@ -31,3 +31,17 @@ PATCH http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
 
 //remove a device from a gateway
 DELETE http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
+
+## Setup
+
+The service backend is mongodb:
+
+## Installation:
+
+- Install mongodb by downloading from its official website for a mac or windows machine
+- Make sure it saved in your system path
+- Start mongodb by running mongod or mongodb in the terminal or microsoft shell
+- Download the project into your local web server
+- Open the folder using Visual Studio Code
+
+-
