@@ -5,11 +5,6 @@ const GatewayService = require('../app/services/gatewayServices');
 describe('Gateway Controller', () => {
 	// create gateway test
 
-	// Mock console.error
-	const consoleErrorSpy = jest
-		.spyOn(console, 'error')
-		.mockImplementation(() => {});
-
 	describe('createGateway', () => {
 		it('should create a gateway', async () => {
 			// Test data
@@ -108,19 +103,19 @@ describe('Gateway Controller', () => {
 			const errorMessage = 'Some error message';
 			const error = new Error(errorMessage);
 
-			// Mocked function
+			// Spy on console.error
 			const consoleErrorSpy = jest
 				.spyOn(console, 'error')
-				.mockImplementation(() => {}); // Mock console.error
+				.mockImplementation(() => {});
 
-			GatewayService.createGateway = jest.fn().mockRejectedValue(error);
+			// Mocked function
+			jest.spyOn(GatewayService, 'createGateway').mockRejectedValue(error);
 
 			// Execute the controller method
 			await gatewayController.createGateway(req, res);
 
 			// Assertions
-			expect(consoleErrorSpy).toHaveBeenCalled(); // Check if console.error was called
-			expect(consoleErrorSpy.mock.calls[0][0]).toBe(error); // Check error message
+			expect(consoleErrorSpy).toHaveBeenCalledWith(errorMessage);
 			expect(res.status).toHaveBeenCalledWith(400);
 			expect(res.json).toHaveBeenCalledWith({ error: errorMessage });
 

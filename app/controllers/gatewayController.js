@@ -23,6 +23,7 @@ const createGateway = async (req, res) => {
 
 		res.status(200).json(createdGateway);
 	} catch (error) {
+		console.error(error);
 		res.status(400).json({ error: error.message });
 	}
 };
