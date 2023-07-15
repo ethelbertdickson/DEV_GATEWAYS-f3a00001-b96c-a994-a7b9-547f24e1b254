@@ -19,7 +19,9 @@ const createGateway = async (req, res) => {
 		}
 
 		const gatewayData = { name, ipv4Address, devices };
-		const createdGateway = await GatewayService.createGateway(gatewayData);
+		const createdGateway = await GatewayService.createGatewayService(
+			gatewayData
+		);
 
 		res.status(200).json(createdGateway);
 	} catch (error) {
