@@ -1,6 +1,7 @@
 // app/models/Gateway.js
 
 const mongoose = require('mongoose');
+const { validateIpv4Address } = require('../utils/validationUtils');
 
 const gatewaySchema = new mongoose.Schema(
 	{
@@ -12,11 +13,7 @@ const gatewaySchema = new mongoose.Schema(
 			type: String,
 			required: true,
 			validate: {
-				validator: function (value) {
-					const ipv4Regex =
-						/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-					return ipv4Regex.test(value);
-				},
+				validator: validateIpv4Address,
 				message: 'Invalid IPv4 address',
 			},
 		},
@@ -44,7 +41,7 @@ const gatewaySchema = new mongoose.Schema(
 			},
 		],
 	},
-	{ versionKey: false } // Exclude the __v field
+	{ versionKey: false }
 );
 
 module.exports = mongoose.model('Gateway', gatewaySchema);

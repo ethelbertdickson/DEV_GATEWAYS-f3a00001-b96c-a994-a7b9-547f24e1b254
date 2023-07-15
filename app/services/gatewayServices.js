@@ -42,6 +42,7 @@ const getDevicesFromGateway = async (gatewayId) => {
 	return gateway.devices;
 };
 
+// get gateway by Id
 const getGatewayById = async (gatewayId) => {
 	const gateway = await Gateway.findById(gatewayId);
 	if (!gateway) {
@@ -89,7 +90,7 @@ const addDeviceToGateway = async (gatewayId, deviceData) => {
 	const existingDevice = gateway.devices.find(
 		(device) => device.vendor === deviceData.vendor
 	);
-
+	// check if device already exist
 	if (existingDevice) {
 		throw new Error('Device with the same vendor already exists');
 	}
