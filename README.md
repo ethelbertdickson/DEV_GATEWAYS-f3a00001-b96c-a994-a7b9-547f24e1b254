@@ -14,7 +14,7 @@ To set up the project, follow these steps:
 4. Open MongoDB using Compass.
 5. Create a new database and name it `musala`.
 6. Import the collection from `dbcollection.json` located in the root directory.
-7. Download the project into your local web server.
+7. Download the project into your local web server. `https://github.com/ethelbertdickson/DEV_GATEWAYS-f3a00001-b96c-a994-a7b9-547f24e1b254`
 8. Open the project folder using Visual Studio Code.
 9. Run the following `npm install` to install the project's dependencies:
 10. Serve the Node server by running `nodemon index`
