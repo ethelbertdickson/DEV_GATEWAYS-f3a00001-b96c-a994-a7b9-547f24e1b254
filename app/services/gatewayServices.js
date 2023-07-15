@@ -1,14 +1,7 @@
 // app/services/gatewayService.js
 
 const Gateway = require('../models/Gateways');
-const bunyan = require('bunyan');
-
-//Bunyan logger
-const logger = bunyan.createLogger({
-	name: 'musala',
-	level: 'info',
-	streams: [{ type: 'file', path: './logfile.log' }],
-});
+const logger = require('../../config/bunyan');
 
 // create gateway Service methods
 const createGatewayService = async (gatewayData) => {

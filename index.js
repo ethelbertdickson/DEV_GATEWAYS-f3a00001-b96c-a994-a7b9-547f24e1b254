@@ -1,20 +1,10 @@
 require('dotenv').config();
 const express = require('express');
-const bunyan = require('bunyan');
+const logger = require('./config/bunyan');
 const connectToDatabase = require('./config/database');
 const gatewayRoutes = require('./app/routes/gatewayRoutes');
 
 const app = express();
-
-//Bunyan logger
-const logger = bunyan.createLogger({
-	name: 'musala',
-	level: 'info',
-	streams: [
-		// { stream: process.stdout },
-		{ type: 'file', path: './logfile.log' },
-	],
-});
 
 // Connect to database
 connectToDatabase();
@@ -23,7 +13,7 @@ connectToDatabase();
 app.use(express.json());
 
 //redirect logs to bunyan
-// console.log = logger.info.bind(logger);
+console.log = logger.info.bind(logger);
 
 // Routes
 app.use('/gateways', gatewayRoutes);
