@@ -1,0 +1,135 @@
+[
+	{
+		"_id": {
+			"$oid": "64a987ecf3640a1f7a99685a"
+		},
+		"name": "dikson",
+		"ipv4Address": "192.0.1.123",
+		"devices": [
+			{
+				"uid": {
+					"$oid": "64a9880df3640a1f7a99685d"
+				},
+				"vendor": "jacksons",
+				"status": "offline",
+				"createdDate": {
+					"$date": "2023-07-08T16:00:13.081Z"
+				}
+			},
+			{
+				"uid": {
+					"$oid": "64b28b9c028785cf049d9bee"
+				},
+				"vendor": "sun",
+				"status": "online",
+				"createdDate": {
+					"$date": "2023-07-15T12:05:48.951Z"
+				}
+			},
+			{
+				"uid": {
+					"$oid": "64b28ba2028785cf049d9bf3"
+				},
+				"vendor": "moon",
+				"status": "online",
+				"createdDate": {
+					"$date": "2023-07-15T12:05:54.836Z"
+				}
+			},
+			{
+				"uid": {
+					"$oid": "64b28bad028785cf049d9bf9"
+				},
+				"vendor": "earth",
+				"status": "online",
+				"createdDate": {
+					"$date": "2023-07-15T12:06:05.007Z"
+				}
+			},
+			{
+				"uid": {
+					"$oid": "64b28bb4028785cf049d9c00"
+				},
+				"vendor": "mar",
+				"status": "online",
+				"createdDate": {
+					"$date": "2023-07-15T12:06:12.192Z"
+				}
+			},
+			{
+				"uid": {
+					"$oid": "64b28bbb028785cf049d9c08"
+				},
+				"vendor": "jupiter",
+				"status": "online",
+				"createdDate": {
+					"$date": "2023-07-15T12:06:19.355Z"
+				}
+			},
+			{
+				"uid": {
+					"$oid": "64b28bc5028785cf049d9c11"
+				},
+				"vendor": "saturn",
+				"status": "online",
+				"createdDate": {
+					"$date": "2023-07-15T12:06:29.606Z"
+				}
+			},
+			{
+				"uid": {
+					"$oid": "64b28bcc028785cf049d9c1b"
+				},
+				"vendor": "neptune",
+				"status": "online",
+				"createdDate": {
+					"$date": "2023-07-15T12:06:36.352Z"
+				}
+			},
+			{
+				"uid": {
+					"$oid": "64b28bd1028785cf049d9c26"
+				},
+				"vendor": "pluto",
+				"status": "online",
+				"createdDate": {
+					"$date": "2023-07-15T12:06:41.625Z"
+				}
+			},
+			{
+				"uid": {
+					"$oid": "64b28be7028785cf049d9c32"
+				},
+				"vendor": "saint",
+				"status": "offline",
+				"createdDate": {
+					"$date": "2023-07-15T12:07:03.008Z"
+				}
+			}
+		]
+	},
+	{
+		"_id": {
+			"$oid": "64ac4dc9198f448721d570ae"
+		},
+		"name": "skynet",
+		"ipv4Address": "192.0.1.125",
+		"devices": []
+	},
+	{
+		"_id": {
+			"$oid": "64ad3a66703a63d0b8aa9aeb"
+		},
+		"name": "films",
+		"ipv4Address": "127.0.1.45",
+		"devices": []
+	},
+	{
+		"_id": {
+			"$oid": "64b28911028785cf049d9b4b"
+		},
+		"name": "transformer",
+		"ipv4Address": "192.0.9.21",
+		"devices": []
+	}
+]
