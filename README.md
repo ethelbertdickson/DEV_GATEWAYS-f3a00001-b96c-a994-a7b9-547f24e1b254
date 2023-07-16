@@ -37,6 +37,13 @@ Use POSTMAN or any other REST client app to interact with the API using the foll
 - Add a new device to a gateway:
   POST http://localhost:3000/gateways/{gatewayId}/devices
 
+  ```
+  {
+    "vendor": "musala",
+    "staus": "online",
+  }
+  ```
+
 - Get all gateways:
   GET http://localhost:3000/gateways
 
@@ -49,8 +56,23 @@ Use POSTMAN or any other REST client app to interact with the API using the foll
 - Update a gateway with ID:
   PATCH http://localhost:3000/gateways/{gatewayId}
 
+  ```
+  {
+    "name": "musala-renamed",
+    "ipv4Address": "127.0.0.100",
+    "devices":[]
+  }
+  ```
+
 - Update a device in a gateway:
   PATCH http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
+
+  ```
+  {
+   "vendor": "musala-rename",
+   "staus": "offline",
+  }
+  ```
 
 - Remove a device from a gateway:
   DELETE http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
