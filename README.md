@@ -13,7 +13,7 @@ To set up the project, follow these steps:
 3. Start MongoDB by running `mongod` or `mongodb` in the terminal or Microsoft Shell.
 4. Open MongoDB using Compass.
 5. Create a new database and name it `musala`.
-6. Import the collection from `dbcollection.json` located in the root directory.
+6. Import the collection from `sample.db.json` located in the root directory.
 7. Download the project into your local web server. `https://github.com/ethelbertdickson/DEV_GATEWAYS-f3a00001-b96c-a994-a7b9-547f24e1b254`
 8. Open the project folder using Visual Studio Code.
 9. Run the following `npm install` to install the project's dependencies:
@@ -25,6 +25,14 @@ Use POSTMAN or any other REST client app to interact with the API using the foll
 
 - Create a new gateway:
   POST http://localhost:3000/gateways
+
+```
+  {
+    "name": "musala",
+    "ipv4Address": "127.0.0.100",
+    "devices":[]
+  }
+```
 
 - Add a new device to a gateway:
   POST http://localhost:3000/gateways/{gatewayId}/devices
