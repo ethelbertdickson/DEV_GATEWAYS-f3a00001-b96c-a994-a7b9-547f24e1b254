@@ -4,7 +4,11 @@
 	"description": "This sample project is managing gateways",
 	"main": "index.js",
 	"scripts": {
-		"test": "jest"
+		"test": "jest --watchAll --verbose",
+		"start": "nodemon index.js"
+	},
+	"engines": {
+		"node": "18.18.1"
 	},
 	"author": "Mfon Ekoh",
 	"license": "ISC",
