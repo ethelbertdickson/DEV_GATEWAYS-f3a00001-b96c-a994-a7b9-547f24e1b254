@@ -27,7 +27,7 @@ describe('Gateway Controller', () => {
 			};
 
 			// Mocked function
-			GatewayService.createGateway = jest
+			GatewayService.createGatewayService = jest
 				.fn()
 				.mockResolvedValue(createdGateway);
 
@@ -35,7 +35,9 @@ describe('Gateway Controller', () => {
 			await gatewayController.createGateway(req, res);
 
 			// Assertions
-			expect(GatewayService.createGateway).toHaveBeenCalledWith(req.body);
+			expect(GatewayService.createGatewayService).toHaveBeenCalledWith(
+				req.body
+			);
 			expect(res.status).toHaveBeenCalledWith(200);
 			expect(res.json).toHaveBeenCalledWith(createdGateway);
 		});
@@ -109,7 +111,9 @@ describe('Gateway Controller', () => {
 				.mockImplementation(() => {});
 
 			// Mocked function
-			jest.spyOn(GatewayService, 'createGateway').mockRejectedValue(error);
+			jest
+				.spyOn(GatewayService, 'createGatewayService')
+				.mockRejectedValue(error);
 
 			// Execute the controller method
 			await gatewayController.createGateway(req, res);
