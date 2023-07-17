@@ -1,5 +1,6 @@
 // app/controllers/gatewayController.js
 const GatewayService = require('../services/gatewayServices');
+const logger = require('../../config/bunyan');
 
 // create gateway controller
 const createGateway = async (req, res) => {
@@ -26,7 +27,15 @@ const createGateway = async (req, res) => {
 		res.status(200).json(createdGateway);
 	} catch (error) {
 		console.error(error);
-		res.status(400).json({ error: error.message });
+
+		if (
+			error.message ===
+			'A device with the same name or IPv4 address already exists.'
+		) {
+			res.status(409).json({ error: error.message }); // Return a 409 conflict status code
+		} else {
+			res.status(400).json({ error: error.message }); // Return a 400 bad request status code for other errors
+		}
 	}
 };
 
@@ -101,7 +110,7 @@ const deleteGateway = async (req, res) => {
 	}
 };
 
-//add devices to gateway
+// add devices to gateway
 const addDeviceToGateway = async (req, res) => {
 	try {
 		const gatewayId = req.params.id;
@@ -112,19 +121,27 @@ const addDeviceToGateway = async (req, res) => {
 		);
 		res.json(gateway);
 	} catch (error) {
-		if (error.message === 'Maximum number of devices reached') {
+		if (error.message.includes('Maximum number of devices reached')) {
 			return res
 				.status(400)
 				.json({ error: 'Maximum number of devices reached.' });
-		}
-		if (error.message === 'Device with the same vendor already exists') {
+		} else if (
+			error.message.includes('Device with the same vendor already exists')
+		) {
 			return res
 				.status(400)
 				.json({ error: 'Device with the same vendor already exists.' });
+		} else if (error.message.includes('Validation failed')) {
+			return res.status(400).json({ error: error.message });
+		} else {
+			console.error(error);
+			res.status(500).json({ error: 'Internal Server Error' });
 		}
-		console.error(error);
-		res.status(500).json({ error: 'Internal Server Error' });
 	}
+};
+
+module.exports = {
+	addDeviceToGateway,
 };
 
 //update gateway controller
