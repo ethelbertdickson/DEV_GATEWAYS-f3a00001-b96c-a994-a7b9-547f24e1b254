@@ -79,5 +79,8 @@ Use POSTMAN or any other REST client app to interact with the API using the foll
   }
   ```
 
+- Remove gateway:
+  DELETE http://localhost:3000/gateways/{gatewayId}
+
 - Remove a device from a gateway:
   DELETE http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
