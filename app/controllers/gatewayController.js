@@ -26,7 +26,7 @@ const createGateway = async (req, res) => {
 
 		res.status(200).json(createdGateway);
 	} catch (error) {
-		console.error(error);
+		logger.error(error);
 
 		if (
 			error.message ===
