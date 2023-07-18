@@ -115,3 +115,9 @@
 {"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":6843,"level":30,"msg":"Connected to MongoDB","time":"2023-07-18T10:48:30.140Z","v":0}
 {"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":7728,"level":30,"msg":"Server listening on port 3000","time":"2023-07-18T11:54:27.326Z","v":0}
 {"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":7728,"level":30,"msg":"Connected to MongoDB","time":"2023-07-18T11:54:27.356Z","v":0}
+{"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":8012,"level":30,"msg":"Server listening on port 3000","time":"2023-07-18T12:01:43.225Z","v":0}
+{"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":8012,"level":30,"msg":"Connected to MongoDB","time":"2023-07-18T12:01:43.255Z","v":0}
+{"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":8037,"level":30,"msg":"Server listening on port 3000","time":"2023-07-18T12:01:49.104Z","v":0}
+{"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":8037,"level":30,"msg":"Connected to MongoDB","time":"2023-07-18T12:01:49.119Z","v":0}
+{"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":8089,"level":30,"msg":"Server listening on port 3000","time":"2023-07-18T12:02:05.859Z","v":0}
+{"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":8089,"level":30,"msg":"Connected to MongoDB","time":"2023-07-18T12:02:05.874Z","v":0}
