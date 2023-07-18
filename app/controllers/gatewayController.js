@@ -32,9 +32,11 @@ const createGateway = async (req, res) => {
 			error.message ===
 			'A device with the same name or IPv4 address already exists.'
 		) {
-			res.status(409).json({ error: error.message }); // Return a 409 conflict status code
+			// Return a 409 conflict status code
+			res.status(409).json({ error: error.message });
 		} else {
-			res.status(400).json({ error: error.message }); // Return a 400 bad request status code for other errors
+			// Return a 400 bad request status code for other errors
+			res.status(400).json({ error: error.message });
 		}
 	}
 };

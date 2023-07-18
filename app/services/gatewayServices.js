@@ -16,7 +16,7 @@ const createGatewayService = async (gatewayData) => {
 		const error = new Error(
 			'A device with the same name or IPv4 address already exists.'
 		);
-		logger.error(error, 'Device creation failed');
+		logger.error(error, 'The device was was not added. ');
 		throw error;
 	}
 

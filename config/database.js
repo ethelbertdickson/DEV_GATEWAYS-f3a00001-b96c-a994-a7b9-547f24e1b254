@@ -11,7 +11,7 @@ const connectToDatabase = () => {
 	const uri = `mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE}`;
 
 	//show path
-	console.log(uri);
+	// console.log(uri);
 
 	mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 	const db = mongoose.connection;
