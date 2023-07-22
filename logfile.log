@@ -121,3 +121,5 @@
 {"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":8037,"level":30,"msg":"Connected to MongoDB","time":"2023-07-18T12:01:49.119Z","v":0}
 {"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":8089,"level":30,"msg":"Server listening on port 3000","time":"2023-07-18T12:02:05.859Z","v":0}
 {"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":8089,"level":30,"msg":"Connected to MongoDB","time":"2023-07-18T12:02:05.874Z","v":0}
+{"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":3819,"level":30,"msg":"Server listening on port 3000","time":"2023-07-22T14:06:12.367Z","v":0}
+{"name":"musala","hostname":"diksons-MacBook-Pro.local","pid":3868,"level":30,"msg":"Server listening on port 3000","time":"2023-07-22T14:06:30.608Z","v":0}
