@@ -1,5 +1,6 @@
 // app/controllers/gatewayController.js
 const GatewayService = require('../services/gatewayServices');
+const logger = require('../../config/bunyan');
 
 // create gateway controller
 const createGateway = async (req, res) => {
@@ -36,8 +37,8 @@ const getAllGateways = async (req, res, next) => {
 		const gateways = await GatewayService.getAllGateways();
 		res.json(gateways);
 	} catch (error) {
-		console.error(error);
-		res.status(500).json({ error: 'Internal error' });
+		logger.error(error);
+		res.status(500).json({ error: 'Internal error', error });
 	}
 };
 
