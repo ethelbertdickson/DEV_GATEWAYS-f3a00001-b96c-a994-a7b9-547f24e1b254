@@ -27,7 +27,7 @@ git clone https://github.com/ethelbertdickson/DEV_GATEWAYS-f3a00001-b96c-a994-a7
 ## Usage
 
 Use POSTMAN or any other REST client app to interact with the API using the following endpoints:
-{port} will be determined by the .env file.
+{port} will be determined by the .env file in the root directory.
 
 -   Create a new gateway:
     POST http://localhost:{port}/gateways
