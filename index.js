@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 //redirect logs to bunyan
-console.log = logger.info.bind(logger);
+// console.log = logger.info.bind(logger);
 
 // Routes
 app.use('/gateways', gatewayRoutes);
@@ -33,7 +33,7 @@ process.on('uncaughtException', (err) => {
 });
 
 // Start the server
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
 	console.log(`Server listening on port ${port}`);
 });

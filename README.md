@@ -27,9 +27,10 @@ git clone https://github.com/ethelbertdickson/DEV_GATEWAYS-f3a00001-b96c-a994-a7
 ## Usage
 
 Use POSTMAN or any other REST client app to interact with the API using the following endpoints:
+{port} will be determined by the .env file.
 
-- Create a new gateway:
-  POST http://localhost:3000/gateways
+-   Create a new gateway:
+    POST http://localhost:{port}/gateways
 
 ```
   {
@@ -39,48 +40,48 @@ Use POSTMAN or any other REST client app to interact with the API using the foll
   }
 ```
 
-- Add a new device to a gateway:
-  POST http://localhost:3000/gateways/{gatewayId}/devices
+-   Add a new device to a gateway:
+    POST http://localhost:{port}/gateways/{gatewayId}/devices
 
-  ```
-  {
-    "vendor": "musala",
-    "staus": "online",
-  }
-  ```
+    ```
+    {
+      "vendor": "musala",
+      "staus": "online",
+    }
+    ```
 
-- Get all gateways:
-  GET http://localhost:3000/gateways
+-   Get all gateways:
+    GET http://localhost:{port}/gateways
 
-- Get all devices in a gateway:
-  GET http://localhost:3000/gateways/{gatewayId}
+-   Get all devices in a gateway:
+    GET http://localhost:{port}/gateways/{gatewayId}
 
-- Get a specific device in a gateway:
-  GET http://localhost:3000/gateways/{gatewayId}/devices/
+-   Get a specific device in a gateway:
+    GET http://localhost:{port}/gateways/{gatewayId}/devices/
 
-- Update a gateway with ID:
-  PATCH http://localhost:3000/gateways/{gatewayId}
+-   Update a gateway with ID:
+    PATCH http://localhost:{port}{port}/gateways/{gatewayId}
 
-  ```
-  {
-    "name": "musala-renamed",
-    "ipv4Address": "127.0.0.100",
-    "devices":[]
-  }
-  ```
+    ```
+    {
+      "name": "musala-renamed",
+      "ipv4Address": "127.0.0.100",
+      "devices":[]
+    }
+    ```
 
-- Update a device in a gateway:
-  PATCH http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
+-   Update a device in a gateway:
+    PATCH http://localhost:{port}/gateways/{gatewayId}/devices/{deviceId}
 
-  ```
-  {
-   "vendor": "musala-rename",
-   "staus": "offline",
-  }
-  ```
+    ```
+    {
+     "vendor": "musala-rename",
+     "staus": "offline",
+    }
+    ```
 
-- Remove gateway:
-  DELETE http://localhost:3000/gateways/{gatewayId}
+-   Remove gateway:
+    DELETE http://localhost:{port}/gateways/{gatewayId}
 
-- Remove a device from a gateway:
-  DELETE http://localhost:3000/gateways/{gatewayId}/devices/{deviceId}
+-   Remove a device from a gateway:
+    DELETE http://localhost:{port}/gateways/{gatewayId}/devices/{deviceId}
